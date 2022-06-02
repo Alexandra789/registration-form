@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1466px;
+  padding: 0 0 0 16px;
+  margin: 0 auto;
+  @media all and (max-width: 1200px) {
+    padding: 0 16px;
+  }
+}
+
+.text, label {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  color: #777E90;
+}
+
+label {
+  line-height: 18px;
+}
+
+.required {
+  color: $red;
+}
+
+input {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  color: $text_black;
+  background: $input_background;
+  border-radius: 8px;
+}

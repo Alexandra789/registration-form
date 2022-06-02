@@ -1,0 +1,205 @@
+.registration {
+  .registration-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+  }
+
+  &-content {
+    width: 50%;
+    @media all and (max-width: 1200px) {
+      width: 100%;
+    }
+  }
+
+  &-img {
+    width: 50%;
+    @media all and (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &-form {
+    max-width: 397px;
+    margin: 0 auto;
+    @media all and (max-width: 1200px) {
+      margin: 30px auto 40px;
+    }
+
+    label {
+      margin-bottom: 13px;
+
+      &[for="itn"] {
+        text-transform: uppercase;
+      }
+    }
+
+    &__title {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 58px;
+      letter-spacing: -0.02em;
+      color: $text_black;
+      margin-bottom: 40px;
+      @media all and (max-width: 350px) {
+        font-size: 40px;
+      }
+    }
+
+    &__error-text {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 23px;
+      margin-top: 10px;
+      display: none;
+
+      a {
+        color: $red;
+      }
+    }
+
+    &__group-flex {
+      display: flex;
+      column-gap: 21px;
+      justify-content: space-between;
+
+      .registration-form__field {
+        width: calc((100% - 21px) / 2);
+      }
+    }
+
+    &__group {
+      margin-bottom: 25px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    &__field {
+      position: relative;
+
+      .toggle-password {
+        background-position: 50%;
+        background-repeat: no-repeat;
+        bottom: 1.1em;
+        top: 3.2em;
+        height: 24px;
+        position: absolute;
+        right: 16px;
+        transition: all .2s ease-in-out;
+        width: 34px;
+
+        &.hidden-password {
+          background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 3L21 21' stroke='%23B8BABF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.5845 10.5869C10.2092 10.9619 9.99823 11.4707 9.99805 12.0012C9.99786 12.5317 10.2084 13.0406 10.5835 13.4159C10.9585 13.7912 11.4672 14.0021 11.9977 14.0023C12.5283 14.0025 13.0372 13.7919 13.4125 13.4169' stroke='%23B8BABF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9.363 5.365C10.2204 5.11972 11.1082 4.99684 12 5C16 5 19.333 7.333 22 12C21.222 13.361 20.388 14.524 19.497 15.488M17.357 17.349C15.726 18.449 13.942 19 12 19C8 19 4.667 16.667 2 12C3.369 9.605 4.913 7.825 6.632 6.659' stroke='%23B8BABF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        }
+
+        &.show-password {
+          background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.5845 10.5869C10.2092 10.9619 9.99823 11.4707 9.99805 12.0012C9.99786 12.5317 10.2084 13.0406 10.5835 13.4159C10.9585 13.7912 11.4672 14.0021 11.9977 14.0023C12.5283 14.0025 13.0372 13.7919 13.4125 13.4169' stroke='%23B8BABF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.636 5.365C13.7921 5.12166 12.9134 5 12 5C11.1082 4.99684 10.2204 5.11972 9.363 5.365C8.34947 5.6663 7.76059 5.91473 6.632 6.659C4.913 7.825 3.369 9.605 2 12C4.667 16.667 8 19 12 19C13.942 19 15.726 18.449 17.357 17.349C18.2757 16.6377 18.7318 16.2279 19.497 15.488C20.388 14.524 21.222 13.361 22 12C20.6314 9.6051 19.0875 7.82481 17.368 6.659M14.636 5.365C15.5912 5.64044 16.5019 6.07176 17.368 6.659M14.636 5.365C15.8889 5.78394 16.4553 6.08201 17.368 6.659' stroke='%23B8BABF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ");
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      input {
+        margin-top: 13px;
+        padding: 17px 19px 18px;
+        border: 1px solid $input_background;
+        width: 100%;
+        font-family: 'Manrope', sans-serif;
+
+        &.registration-form__password {
+          padding: 18px 56px 19px 20px;
+        }
+
+        &:focus {
+          border: 1px solid $text_gray;
+        }
+
+        &.error {
+          border: 1px solid $red;
+        }
+      }
+    }
+
+    .prompt {
+      margin-top: 15px;
+    }
+
+    .checkbox {
+      display: flex;
+      margin-bottom: 25px;
+      margin-top: 30px;
+
+      label {
+        letter-spacing: -0.01em;
+        display: flex;
+        align-items: baseline;
+
+        p {
+          max-width: 368px;
+          @media all and (max-width: 375px) {
+            max-width: 258px;
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      input[type=checkbox] {
+        display: none;
+      }
+
+      input[type=checkbox] + label:before {
+        content: "\2714";
+        color: transparent;
+        display: inline-block;
+        border: 1px solid $input_checkbox;
+        border-radius: 2px;
+        margin-right: 10px;
+        height: 18px;
+        width: 18px;
+        transition: all .2s ease-in-out;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      input[type=checkbox]:checked + label:before {
+        border-color: $checkbox_green;
+        background-color: $checkbox_green;
+        background-image: url("data:image/svg+xml,%3Csvg width='15' height='10' viewBox='0 0 15 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.16699 5.00016L5.33366 9.16683L13.667 0.833496' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      }
+    }
+
+    &__button {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 28px;
+      background: $red;
+      box-shadow: 0 20px 25px rgba(209, 26, 42, 0.15);
+      border-radius: 12px;
+      color: $white;
+      padding: 14px 20px;
+      width: 100%;
+
+      &:not(&_disabled):hover {
+        cursor: pointer;
+      }
+
+      &:active {
+        box-shadow: none;
+      }
+
+      &_disabled {
+        background-color: $button_disabled;
+        box-shadow: none;
+      }
+    }
+  }
+}

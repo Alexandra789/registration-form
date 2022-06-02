@@ -1,0 +1,32 @@
+{
+  "name": "web-secret-test-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack serve --env develop"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexandra789/web-secret-test-task.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alexandra789/web-secret-test-task/issues"
+  },
+  "homepage": "https://github.com/Alexandra789/web-secret-test-task#readme",
+  "dependencies": {
+    "css-loader": "^6.7.1",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "sass-loader": "^13.0.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.1"
+  }
+}
