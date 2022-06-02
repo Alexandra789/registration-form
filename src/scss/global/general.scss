@@ -45,3 +45,13 @@ input {
   background: $input_background;
   border-radius: 8px;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  border: 1px solid $input_background;
+  -webkit-text-fill-color: $text_black;
+  background-color: $input_background !important;
+  -webkit-box-shadow: 0 0 0 0 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

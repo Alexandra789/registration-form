@@ -153,10 +153,11 @@
         }
       }
 
-      label {
+      label[for="check"] {
         letter-spacing: -0.01em;
         display: flex;
         align-items: baseline;
+        margin-bottom: 0;
 
         &:hover {
           cursor: pointer;
