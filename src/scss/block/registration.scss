@@ -187,7 +187,8 @@
       color: $white;
       padding: 14px 20px;
       width: 100%;
-
+      transition: all .2s ease-in-out;
+      
       &:not(&_disabled):hover {
         cursor: pointer;
       }
