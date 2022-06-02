@@ -84,7 +84,7 @@
     &__group {
       margin-bottom: 25px;
 
-      &:last-of-type {
+      &:nth-child(5) {
         margin-bottom: 0;
       }
     }
