@@ -1,3 +1,12 @@
 # web-secret-test-task
 
-https://helpful-elf-a50761.netlify.app/
+npm install
+
+
+npm run build
+
+
+npm run dev
+
+https://celadon-phoenix-f1d78a.netlify.app/
+
